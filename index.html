@@ -4,6 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Booking System</title>
+    <style>body {
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      margin: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    #search-box {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    input {
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 8px 0 0 8px;
+      outline: none;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 0 8px 8px 0;
+      background: #4f46e5;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: darkgreen;
+    }
+    #recipes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .media-container {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .media-container img,
+    .media-container iframe {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: none;
+      border-radius: 8px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .media-container iframe {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .media-container:hover iframe {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .media-container:hover img {
+      opacity: 0;
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #4f46e5;
+    }
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
     <h1>Event Booking System</h1>
